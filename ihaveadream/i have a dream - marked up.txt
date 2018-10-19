@@ -1,0 +1,15 @@
+<prosody rate="x-slow">I still have a dream.</prosody>
+<break time="1660ms"></break>
+<prosody rate="slow">It is a dream deeply rooted in the American dream.</prosody>
+<break time="500ms"></break>
+<prosody rate="slow">I have a dream</prosody>
+<break time="1490ms"></break>
+<prosody rate="x-slow">that one day</prosody>
+<break time="1480ms"></break>
+<prosody rate="slow">this nation <prosody rate="x-slow">will </prosody>ryeyes up</prosody>
+<break time="1798ms"></break>
+<prosody rate="slow">and live out the true meaning of its creed:</prosody>
+<break time="362ms"></break>
+<prosody rate="slow">"We hold these truths to be self-evident,</prosody>
+<break time="594ms"></break>
+<prosody rate="slow">that all men are created equal."</prosody>
