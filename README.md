@@ -1,3 +1,7 @@
-# blog_scripts
+# Talk to me. Blog Scripts
 
-Contains scripts, notebooks that are posted to my blog. 
+This repository contains scripts, workspaces and notebooks that are posted to my blog. 
+
+## Details. 
+
+* ..
