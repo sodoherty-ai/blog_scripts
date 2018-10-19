@@ -1,0 +1,63 @@
+Note: This is unsupported. 
+
+1. Download the JSON for your conversation and save it as "conversation.json"
+   in the workarea folder. 
+   
+2. Run the python file "createTestTrain.py". This will generate your test and
+   train files. 
+   
+3. In Bluemix create a new Watson Conversation service. Go to service
+   credentials and make a note of it. It should look something like this. 
+    
+   {
+     "url": "https://gateway.watsonplatform.net/conversation/api",
+     "password": "H5k3ro234fTK",
+     "username": "34f3142e-12fc-22a1-c4d4-374629271639"
+   }
+   
+4. Go to the conversation workspace for this service, and import the following
+   files in your workspace.
+   
+      conversation_train1.json
+      conversation_train2.json
+      conversation_train3.json
+  
+5. Make a note of the workspace IDs. 
+
+6. Open "runTestAndTrain.py" on the line: 
+
+     ctx = {}
+     
+   Change the {} to your credentials in step 3. 
+   
+     ctx = {
+         "url": "https://gateway.watsonplatform.net/conversation/api",
+         "password": "H5k3ro234fTK",
+         "username": "34f3142e-12fc-22a1-c4d4-374629271639"
+     }
+     
+7. Change the workspace IDs line to add your workspaces. Example: 
+
+			workspace_ids = [
+			    '',
+			    '',
+			    ''
+			    ] 
+    
+    to:
+    
+ 			workspace_ids = [
+			    'f941ab0e-f01e-430b-9882-90ed279b3978',
+			    '7d278c38-5a6c-4d7d-9177-5fef3b3575a6',
+			    '02945373-61c9-4471-8345-804979cd4d6a'
+			    ] 
+
+8. Check that your conversation workspaces are fully trained before continuing.
+
+9. Run the script "runTestAndTrain.py". You will need to install the Watson
+   Python SDK kit for it to work. It will then test all your "test" sets. 
+   
+Once it's completed you should have three report files created in your work 
+area. You can use these reports to see how your system is performing. 
+
+The report files can be opened in most spreadsheet programs.
