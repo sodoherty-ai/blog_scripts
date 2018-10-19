@@ -1,0 +1,30 @@
+if (!UltraEdit.columnMode) {
+  if (!UltraEdit.activeDocument.isSel()) {
+    UltraEdit.activeDocument.selectAll();
+  }
+  
+  var jsonText = UltraEdit.activeDocument.selection;
+  var json = JSON.parse(jsonText);
+  
+	UltraEdit.newFile();
+  
+  var entities = json.entities;
+ 	UltraEdit.activeDocument.write('Entity\tValue\tSynonyms\n')
+  for (var i = 0; i < entities.length; i++) {
+  
+  	var entity = entities[i].entity
+  	var values = entities[i].values
+  	
+  	for (var j = 0; j < values.length; j++) { 
+			UltraEdit.activeDocument.write(entity + '\t' + values[j].value + '\t');
+			
+			var synonyms = values[j].synonyms
+			var syn = ' '
+			for (var k = 0; k < synonyms.length; k++) { 
+				syn += '"' + synonyms[k] + '",'
+			}
+	  	UltraEdit.activeDocument.write(syn + '\n')
+  	}
+  }
+
+}

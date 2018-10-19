@@ -1,0 +1,23 @@
+if (!UltraEdit.columnMode) {
+  if (!UltraEdit.activeDocument.isSel()) {
+    UltraEdit.activeDocument.selectAll();
+  }
+  var jsonText = UltraEdit.activeDocument.selection;
+  var json = JSON.parse(jsonText);
+  
+	UltraEdit.newFile();
+  var intents = json.intents;
+  
+  UltraEdit.activeDocument.write('"Question","Intent"\n');
+  	
+  for (var i = 0; i < intents.length; i++) {
+  
+  	var intent = intents[i].intent
+  	var examples = intents[i].examples
+  	
+		for (var j = 0; j < examples.length; j++) { 
+			UltraEdit.activeDocument.write('"' + examples[j].text + '","' + intent + '"\n');
+  		
+  	}
+  }
+}

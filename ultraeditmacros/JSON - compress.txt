@@ -1,0 +1,9 @@
+if (!UltraEdit.columnMode) {
+  if (!UltraEdit.activeDocument.isSel()) {
+    UltraEdit.activeDocument.selectAll();
+  }
+  var jsonText = UltraEdit.activeDocument.selection;
+  var json = JSON.parse(jsonText);
+  var jsonTextFormatted = JSON.stringify(json, null, null);
+  UltraEdit.activeDocument.write(jsonTextFormatted);
+}
